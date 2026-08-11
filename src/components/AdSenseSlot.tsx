@@ -26,7 +26,7 @@ export const AdSenseSlot: React.FC<AdSenseSlotProps> = ({
       <ins
         className="adsbygoogle"
         style={{ display: 'block', width: '100%', height: '100%' }}
-        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-client="ca-pub-9938547495698680"
         data-ad-slot={slotId}
         data-ad-format="auto"
         data-full-width-responsive="true"

@@ -32,13 +32,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicy }) => {
               )}
             </p>
 
-            <div className="flex items-center gap-2 text-xs text-slate-300">
-              <Mail className="w-4 h-4 text-blue-400 shrink-0" />
-              <span>{t('문의처: ', 'Contact: ')}</span>
-              <a href="mailto:ju9896012@gmail.com" className="font-bold text-white hover:underline">
-                ju9896012@gmail.com
-              </a>
-            </div>
           </div>
 
           {/* Quick Menu Links */}

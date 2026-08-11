@@ -1,0 +1,6 @@
+{
+  "name": "알기쉽게 배우는 AI(ChatGPT, Google Gemini, Claude, Perplexity, Microsoft Copilot)",
+  "description": "ChatGPT, Google Gemini, Claude, Perplexity, Microsoft Copilot 특징 비교 및 초·중·고급 사용 가이드 / Easy AI Guide for Beginners to Experts",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

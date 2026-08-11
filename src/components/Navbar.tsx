@@ -109,14 +109,20 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Search & Actions */}
           <div className="hidden sm:flex items-center gap-2">
             {/* Language Switcher */}
-            <button
-              onClick={toggleLang}
-              className="flex items-center gap-1.5 px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-xl border border-slate-200 transition-colors"
-              title={t('언어 변경 / Change Language', 'Change Language')}
-            >
-              <Globe className="w-3.5 h-3.5 text-indigo-600" />
-              <span>{lang === 'ko' ? 'KR' : 'EN'}</span>
-            </button>
+            <div className="flex items-center bg-slate-100/80 rounded-xl p-1 border border-slate-200/80 shadow-inner">
+              <button
+                onClick={() => lang !== 'ko' && toggleLang()}
+                className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all ${lang === 'ko' ? 'bg-white text-blue-600 shadow-sm border border-slate-200/50' : 'text-slate-500 hover:text-slate-700'}`}
+              >
+                한국어
+              </button>
+              <button
+                onClick={() => lang !== 'en' && toggleLang()}
+                className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all ${lang === 'en' ? 'bg-white text-blue-600 shadow-sm border border-slate-200/50' : 'text-slate-500 hover:text-slate-700'}`}
+              >
+                English
+              </button>
+            </div>
 
             {/* Quick Search */}
             <div className="relative">
@@ -151,13 +157,21 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Mobile Actions */}
           <div className="flex sm:hidden items-center gap-2">
-            <button
-              onClick={toggleLang}
-              className="p-2 text-slate-700 font-bold text-xs rounded-xl bg-slate-100 border border-slate-200 flex items-center gap-1"
-            >
-              <Globe className="w-4 h-4 text-indigo-600" />
-              <span>{lang === 'ko' ? 'KR' : 'EN'}</span>
-            </button>
+            {/* Mobile Language Switcher */}
+            <div className="flex items-center bg-slate-100/80 rounded-xl p-1 border border-slate-200/80 shadow-inner">
+              <button
+                onClick={() => lang !== 'ko' && toggleLang()}
+                className={`px-2 py-1 text-xs font-bold rounded-lg transition-all ${lang === 'ko' ? 'bg-white text-blue-600 shadow-sm border border-slate-200/50' : 'text-slate-500 hover:text-slate-700'}`}
+              >
+                KOR
+              </button>
+              <button
+                onClick={() => lang !== 'en' && toggleLang()}
+                className={`px-2 py-1 text-xs font-bold rounded-lg transition-all ${lang === 'en' ? 'bg-white text-blue-600 shadow-sm border border-slate-200/50' : 'text-slate-500 hover:text-slate-700'}`}
+              >
+                ENG
+              </button>
+            </div>
             <button
               onClick={() => setSearchOpen(!searchOpen)}
               className="p-2 text-slate-600 hover:text-slate-900 rounded-xl bg-slate-100"

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://learn-ai-guide.com/sitemap.xml
+Sitemap: https://ai-study-7a7.pages.dev/sitemap.xml
